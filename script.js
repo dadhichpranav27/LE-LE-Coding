@@ -7,7 +7,7 @@ let baseSpeed = 150;
 // ==========================
 // 🔊 AUDIO BUFFER SYSTEM
 // ==========================
-const DOT_SOUND = "le.mp3";
+const DOT_SOUND = "Le.mp3";
 const DASH_SOUND = "yehle.mp3";
 
 let audioCtx;
