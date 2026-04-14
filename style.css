@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+body {
+    background: #000;
+    color: #00ff88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+/* Input */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* FIXED spacing */
+}
+input {
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 5px;
+}
+input {
+    padding: 12px;
+    border: 1px solid #00ff88;
+    background: transparent;
+    color: #00ff88;
+    outline: none;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #00ff88;
+    opacity: 0.5;
+}
+
+button {
+    padding: 12px;
+    background: #00ff88;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #00ff88;
+}
+
+/* Output */
+.output-section {
+    margin-top: 25px;
+}
+
+#signalDisplay {
+    margin-top: 10px;
+    min-height: 30px;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* 🌊 Wave Container */
+.wave-container {
+    margin-top: 25px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🌊 Wave Bars */
+.wave {
+    display: flex;
+    gap: 4px;
+}
+
+.wave span {
+    width: 4px;
+    height: 10px;
+    background: #00ff88;
+    box-shadow: 0 0 8px #00ff88;
+    display: inline-block;
+    transition: height 0.1s ease;
+}
+.speed-control {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.speed-control label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* 🔥 COOL SLIDER */
+.speed-control input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: rgba(0, 255, 136, 0.2);
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Track glow */
+.speed-control input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: linear-gradient(90deg, #00ff88, #00cc66);
+    border-radius: 10px;
+}
+
+/* Thumb (main part 🔥) */
+.speed-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: #00ff88;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px;
+    box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+    transition: 0.2s;
+}
+
+.speed-control input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Firefox support */
+.speed-control input[type="range"]::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    background: #00ff88;
+    border-radius: 50%;
+    cursor: pointer;
+}
